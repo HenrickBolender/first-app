@@ -32,11 +32,7 @@ namespace covidSim.Services
         {
             var population = Enumerable
                 .Repeat(0, PeopleCount)
-<<<<<<< HEAD
                 .Select((_, index) => new Person(index, FindHome(), Map, false))
-=======
-                .Select((_, index) => new Person(index, FindHome(), Map, index % 33 == 0))
->>>>>>> 4d0c1b6ab428290024a93aa63078a7734d670534
                 .ToList();
             InfectPopulation(population);
             return population;
